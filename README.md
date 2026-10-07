@@ -1,17 +1,12 @@
-# SmartFinds Store
-A responsive dropshipping storefront MVP.
+# SmartFinds
 
-Included:
-- Responsive storefront
-- Product catalog and category filtering
-- Working browser cart with localStorage
-- Demo checkout handoff
-- AI catalog-monitor demo
-- No framework or paid dependencies
+Static storefront for GitHub Pages.
 
-To run:
-1. Open index.html in a browser.
-2. For hosting, upload all three files to any static host.
+## Current catalog
+The demo catalog has been upgraded from emoji placeholders to real supplier listings and product photography sourced from CJdropshipping. Product prices shown on the storefront are provisional retail prices; shipping, taxes, supplier availability, and final margins must be validated before accepting live orders.
 
-Important:
-This is a storefront prototype, not a live commerce backend. Before accepting real orders, connect a payment processor, order database, supplier/fulfillment service, shipping/returns policies, analytics, and server-side security.
+## Deploy
+Upload `index.html`, `styles.css`, and `app.js` to the root of a public GitHub repository and enable GitHub Pages from the `main` branch and `/ (root)`.
+
+## Important
+The checkout is still a demo. No live payment processing or automatic order fulfillment is connected yet.
