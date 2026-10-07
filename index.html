@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>SmartFinds — Better Finds, Smarter Shopping</title>
+<meta name="description" content="SmartFinds discovers useful products without the endless scrolling.">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header class="top">
+  <div class="nav wrap">
+    <a class="logo" href="#"><span>SF</span> SmartFinds</a>
+    <nav><a href="#shop">Shop</a><a href="#why">Why us</a><a href="#ai">AI picks</a></nav>
+    <button class="cartBtn" onclick="openCart()">Cart <b id="cartCount">0</b></button>
+  </div>
+</header>
+
+<main>
+<section class="hero wrap">
+  <div>
+    <p class="eyebrow">CURATED BY AI • BUILT FOR REAL LIFE</p>
+    <h1>Find the stuff you’ll actually use.</h1>
+    <p class="lead">SmartFinds filters out the junk and highlights practical, interesting products worth a closer look.</p>
+    <div class="actions"><a class="primary" href="#shop">Shop the picks</a><a class="secondary" href="#ai">See how it works →</a></div>
+    <div class="trust"><span>✓ Curated picks</span><span>✓ Secure checkout</span><span>✓ Simple returns</span></div>
+  </div>
+  <div class="heroCard">
+    <div class="orb">✦</div>
+    <p>AI PICK OF THE DAY</p>
+    <h3 id="heroName">Magnetic Cable Organizer</h3>
+    <strong id="heroPrice">$18.99</strong>
+    <button onclick="addHero()">Add to cart</button>
+  </div>
+</section>
+
+<section id="shop" class="shop wrap">
+  <div class="sectionHead"><div><p class="eyebrow">THE COLLECTION</p><h2>Popular right now</h2></div><div class="filters" id="filters"></div></div>
+  <div class="grid" id="products"></div>
+</section>
+
+<section id="why" class="features wrap">
+  <div><p class="eyebrow">NO ENDLESS SCROLLING</p><h2>A store that does the filtering for you.</h2></div>
+  <div class="featureGrid">
+    <article><span>01</span><h3>Useful first</h3><p>Products are selected around everyday problems, convenience, and giftability.</p></article>
+    <article><span>02</span><h3>Less clutter</h3><p>A deliberately small catalog keeps the shopping experience quick and focused.</p></article>
+    <article><span>03</span><h3>AI-assisted</h3><p>Product descriptions, merchandising ideas, and catalog recommendations can be automated.</p></article>
+  </div>
+</section>
+
+<section id="ai" class="aiSection">
+  <div class="wrap aiInner">
+    <div><p class="eyebrow">SMARTFIND ENGINE</p><h2>Your store can get smarter over time.</h2><p>Connect supplier data, sales analytics, and an AI workflow later to automate product research, copy updates, merchandising, and alerts.</p></div>
+    <div class="status"><div class="dot"></div><b>AI catalog monitor</b><span>Ready for automation</span><button onclick="runAI()">Run a demo scan</button><small id="aiResult"></small></div>
+  </div>
+</section>
+</main>
+
+<footer><div class="wrap foot"><span>© 2026 SmartFinds</span><span>Shipping · Returns · Privacy</span></div></footer>
+
+<div class="overlay" id="overlay" onclick="closeCart(event)">
+  <aside class="cart" onclick="event.stopPropagation()"><button class="close" onclick="closeCart()">×</button><h2>Your cart</h2><div id="cartItems"></div><div class="total"><span>Total</span><b id="total">$0.00</b></div><button class="checkout" onclick="checkout()">Checkout</button><p class="fine">Checkout is ready to connect to Stripe/Shopify when you choose your payment provider.</p></aside>
+</div>
+<script src="app.js"></script>
+</body>
+</html>
